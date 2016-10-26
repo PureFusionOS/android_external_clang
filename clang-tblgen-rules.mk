@@ -113,8 +113,8 @@ endif
 
 ifneq ($(findstring Checkers.inc,$(TBLGEN_TABLES)),)
 $(eval $(call define-clang-tblgen-rule, \
-    $(generated_sources)/Checkers.inc, \
-    $(CLANG_ROOT_PATH)/lib/StaticAnalyzer/Checkers/Checkers.td,clang-sa-checkers))
+    $(generated_sources)/include/clang/StaticAnalyzer/Checkers/Checkers.inc, \
+    $(CLANG_ROOT_PATH)/include/clang/StaticAnalyzer/Checkers/Checkers.td,clang-sa-checkers))
 endif
 
 ifneq ($(findstring CommentCommandInfo,$(TBLGEN_TABLES)),)

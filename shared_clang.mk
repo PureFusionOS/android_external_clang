@@ -21,7 +21,8 @@ clang_whole_static_libraries := \
 	libclangRewriteFrontend \
 	libclangSema \
 	libclangSerialization \
-	libclangTooling
+	libclangTooling \
+	libclangToolingCore
 
 # host
 include $(CLEAR_VARS)
@@ -33,7 +34,7 @@ LOCAL_WHOLE_STATIC_LIBRARIES := $(clang_whole_static_libraries)
 
 LOCAL_SHARED_LIBRARIES := libLLVM
 
-LOCAL_LDLIBS_windows := -limagehlp -lpsapi
+LOCAL_LDLIBS_windows := -limagehlp -lpsapi -lversion
 
 LOCAL_SHARED_LIBRARIES_darwin := libc++
 LOCAL_SHARED_LIBRARIES_linux := libc++
